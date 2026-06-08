@@ -10,7 +10,10 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [
-  { name = "OpenAI Codex" }
+  { name = "Brandon Caylor", email = "thetruemanshow24@gmail.com" }
+]
+maintainers = [
+  { name = "Brandon Caylor", email = "thetruemanshow24@gmail.com" }
 ]
 keywords = ["dependencies", "runtime", "topology", "python", "security-review"]
 classifiers = [
