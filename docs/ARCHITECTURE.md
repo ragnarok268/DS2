@@ -13,6 +13,7 @@ DS2 is organized around a deterministic scan pipeline.
 
 ## Modules
 
+- `ds2/__init__.py`: development shim so `python -m ds2.cli` works from the repo root while packaged source stays in `src/ds2/`.
 - `src/ds2/cli.py`: CLI entrypoints for `scan` and `explain`.
 - `src/ds2/scan.py`: orchestration layer for the full scan.
 - `src/ds2/collectors/`: manifest, import, and installed metadata collection.

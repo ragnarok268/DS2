@@ -1,5 +1,7 @@
 # DS2
 
+[![CI](https://github.com/ragnarok268/DS2/actions/workflows/ci.yml/badge.svg)](https://github.com/ragnarok268/DS2/actions/workflows/ci.yml)
+
 DS2 is `ps + netstat + tree for dependency/runtime authority`.
 
 Current release candidate: `v0.1.0`.
