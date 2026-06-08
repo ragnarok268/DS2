@@ -10,6 +10,45 @@ In one command, it turns a Python repo into a deterministic map of declared depe
 
 For evaluators: DS2 is a deliberately scoped governance artifact for AI-assisted software workflows. It emphasizes reproducibility, honest boundaries, and low-friction local evaluation over feature sprawl.
 
+## In plain English
+
+DS2 shows what capabilities enter your software through its dependencies.
+
+It helps reviewers see when a project depends on packages that may introduce network access, process execution, cloud access, browser automation, database access, or other operational capabilities.
+
+DS2 does not decide that a dependency is malicious. It gives reviewers a deterministic map of the dependency surface so they know what deserves attention before running, deploying, or accepting generated code.
+
+What DS2 shows you:
+
+- Which dependencies were declared by the project.
+- Which packages were observed in the source imports.
+- Which kinds of operational capability those packages may introduce.
+- Which parts of the dependency surface deserve closer review.
+
+Why you would care:
+
+- It helps you spot runtime-relevant dependencies before you execute or deploy a project.
+- It gives you a reviewer-friendly summary instead of making you inspect every dependency by hand.
+- It makes generated or fast-moving codebases easier to sanity-check.
+
+### Example Meanings
+
+| What DS2 sees | What it means in plain English |
+|---|---|
+| Network client dependency | This project may make outbound network calls. |
+| Network server dependency | This project may expose a service or API. |
+| Process execution capability | This project may launch local programs or shell commands. |
+| Cloud/API dependency | This project may interact with external cloud services. |
+| Browser automation dependency | This project may control a browser or automate web interactions. |
+
+### What DS2 Does Not Do
+
+- Does not replace SBOM tools.
+- Does not scan for CVEs.
+- Does not prove code is safe.
+- Does not perform dynamic runtime monitoring.
+- Does not implement SLSA or provenance systems.
+
 ## One-Minute Evaluator Flow
 
 ```bash
