@@ -18,6 +18,9 @@
 ## Commands Run
 
 ```powershell
+git status --short
+git diff --check
+git diff --stat
 python -m pytest
 python -m ds2.cli version
 python -m ds2.cli scan examples/fastapi_app --out artifacts/demo
@@ -32,6 +35,10 @@ for p in [
 print("json-ok")
 '@ | python -
 git diff --check
+git add .
+git diff --cached --check
+git commit -m "Add CI verification workflow"
+git push
 ```
 
 ## Local Results
@@ -44,7 +51,13 @@ git diff --check
 
 ## GitHub Actions Result
 
-- Pending local commit and push.
+- Workflow file: `.github/workflows/ci.yml`
+- Badge URL responded successfully.
+- Repository page includes the CI badge in the rendered README.
+- Repository page includes the screenshot references used in the README.
+- GitHub detected the MIT license.
+- Actions workflow page loaded successfully and exposed success markers for the CI run.
+- Pushed commit: `510ac96` with message `Add CI verification workflow`
 
 ## Scanner Behavior
 
